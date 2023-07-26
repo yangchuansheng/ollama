@@ -32,8 +32,8 @@ jobs:
           
       - name: delete user
         run:
-          gsed -i "/USER/d" Dockerfile
-          gsed -i "/GROUP/d" Dockerfile
+          sed -i "/USER/d" Dockerfile
+          sed -i "/GROUP/d" Dockerfile
 
       # Runs a single command using the runners shell
       - name: Build and push Docker images to docker.io and ghcr.io
